@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room 32</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #e6e6e6;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        /* Soft museum spotlight */
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.95) 70%);
+            pointer-events: none;
+        }
+
+        .notes {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            z-index: 2;
+        }
+
+        .note {
+            width: 260px;
+            padding: 20px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            transform: rotate(-2deg);
+        }
+
+        .red {
+            background: #b32626;
+            color: #fff5f5;
+        }
+
+        .blue {
+            background: #1e4fa8;
+            color: #e6f0ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notes">
+        <div class="note red">
+            There’s nothing special about room 32, don’t look too hard
+        </div>
+
+        <div class="note blue">
+            One sentence I speak in room 31 is a clue itself
+        </div>
+    </div>
+
+</body>
+</html>

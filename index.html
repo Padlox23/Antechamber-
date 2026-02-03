@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room 46</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #e6e6e6;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+        }
+
+        .door {
+            width: 220px;
+            height: 380px;
+            background: #ffffff;
+            border: 2px solid #444;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+        }
+
+        .inputs {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 220px;
+        }
+
+        input, button {
+            padding: 10px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            color: #e6e6e6;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #222;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ROOM 46</h1>
+
+    <div class="door">
+        <input id="mainpass" type="password" placeholder="Main Password">
+    </div>
+
+    <div class="inputs">
+        <input id="key1" type="text" placeholder="Key 1">
+        <input id="key2" type="text" placeholder="Key 2">
+        <button onclick="unlock()">UNLOCK</button>
+    </div>
+
+    <script>
+        function unlock() {
+            const main = document.getElementById("mainpass").value.trim().toUpperCase();
+            const k1 = document.getElementById("key1").value.trim().toUpperCase();
+            const k2 = document.getElementById("key2").value.trim().toUpperCase();
+
+            if (main === "ROOMFORTYSIX" && k1 === "KEYONE" && k2 === "KEYTWO") {
+                window.location.href = "room46.html";
+            } else {
+                alert("ACCESS DENIED");
+            }
+        }
+    </script>
+
+</body>
+</html>
